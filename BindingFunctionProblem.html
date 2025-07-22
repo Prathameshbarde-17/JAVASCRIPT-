@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Binding Function</title>
+  </head>
+  <body>
+    <h1>Binding Function</h1>
+    <p>person and member are two object.</p>
+    <p>The member object borrow the fullname method from person:</p>
+    <p id="demo"></p>
+    <script>
+      //Problem Statement 1: Function borrowingWith thebind()method,
+      // create two objects and make an object borrow a method from another object.
+
+      const fullname = {
+        firstName: "Prathamesh",
+        lastName: "Barde",
+
+        display: function () {
+          return this.firstName + " " + this.lastName;
+        },
+      };
+      const person = {
+        firstName: "Patty",
+        lastName: "Barde",
+      };
+      let display = fullname.display.bind(person);
+      document.getElementById("demo").innerHTML = display();
+
+      //Problem Statement:2 this in method
+      // When used in an object method,this refers to the object.
+      //  Create an object, where you have multiple properties and values,
+      // and define a function as one value.
+      // With help of this key word access the values of properties in that function.
+      // Invoke the function to display the data from theobject.
+
+      //Create a object.
+      const Person = {
+        fistName: "John",
+        lastName: "Doe",
+        id: 555,
+        fullName: function () {
+          return this.fistName + " " + this.lastName;
+        },
+      };
+      document.getElementById("demo").innerHTML = Person.fullName();
+
+      //PROBLEM STATEMENT:3this as global object
+      // When used alone,thisrefers to the global object.
+      // In a browser window the global object is[objectWindow],
+      // Display the global object in a browser window by assigning this as a value of a variable and print the variable.
+
+      let x = this;
+      document.getElementById("demo").innerHTML = x;
+
+      //PROBLEM STATEMENT:4  this in function (Default)
+      // In a function, the global object is the default binding forthis.
+      // Create a function that returns this.
+      // And invoke the function to see what gets printed in the output window
+
+      document.getElementById("demo").innerHTML = myfunction;
+
+      function myfunction() {
+        return this;
+      }
+    </script>
+  </body>
+</html>

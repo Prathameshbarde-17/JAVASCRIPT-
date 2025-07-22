@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Driven Function</title>
+  </head>
+  <body onresize="document.body.style.backgroundColor='red'">
+    <input type="text" id="KeyEvent" />
+    <!--Onclick Event -->
+    <button onclick="document.getElementById('time').innerHTML=Date()">
+      show time
+    </button>
+    <br />
+    <br />
+    <h1>JAVASCRIPT EVENTS</h1>
+    <input type="button" onclick="clickevent()" value="Who's this?" />
+    <br />
+    <div id="time"></div>
+    <div
+      onmouseover="document.body.style.backgroundColor='Orange'"
+      onmouseout="document.body.style.backgroundColor='Blue'"
+      id="changeColor"
+    >
+      Mouseover to change color
+    </div>
+
+    <br />
+    <p onmouseover="mouseevent()">keep cursor over me</p>
+
+    <script src="PracticeEvent.js">
+      //onmouseover Event
+      let i = 0;
+      document.getElementById("changeColor").onmouseover = function () {
+        i++;
+        document.getElementById("time").innerHTML =
+          "Mouse over is called with i:" + i;
+      };
+      //Onmousemove Event
+      document.getElementById("changeColor").onmousemove = function () {
+        i++;
+        document.getElementById("time").innerHTML =
+          "Mouse move is called with i:" + i;
+      };
+      //Onmousedown Event
+      document.getElementById("changeColor").onmousedown = function () {
+        alert("Mouse Down is occured...");
+      };
+      //Onmouseup Event
+      document.getElementById("changeColor").onmouseup = function () {
+        alert("Mouse Up is Occured...");
+      };
+      //KeyUp Event
+      document.getElementById("KeyEvent").onkeyup = function () {
+        document.getElementById("time").innerHTML = "Key is Up.";
+      };
+      //KeyDown Event
+      document.getElementById("KeyEvent").onkeydown = function () {
+        document.getElementById("time").innerHTML = "Key is Down.";
+      };
+      //KeyPress Event
+      document.getElementById("KeyEvent").onkeypress = function () {
+        document.getElementById("time").style.backgroundColor = "Yellow";
+      };
+      //Onload Event
+      document.body.onload = function () {
+        alert("This is loaded...");
+      };
+      //unload Event
+      document.body.onunload = function () {
+        alert("this is unloaded...");
+      };
+    </script>
+  </body>
+</html>

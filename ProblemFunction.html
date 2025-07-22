@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Problem Function</title>
+  </head>
+  <body>
+    <script>
+      //Problem Statement 1: Display Text
+      // Display a text in the console window using JavaScript Functions.
+      //Hello there!
+
+      function helloFun() {
+        console.log("Hello there!");
+      }
+      helloFun();
+
+      //Problem Statement 2: Function with Parameters.
+      //Print the username in the console window, using function parameters.
+      //Get the user name usingthe prompt window
+      //Enter a name:Simon
+      //Hello Simon:)
+
+      function userName(name) {
+        //   console.log("Enter a name: " + name);
+        console.log("Hello " + name);
+      }
+      let name = prompt("Enter a name:");
+      //userName("Prathamesh"+name)
+      userName(name);
+
+      //Problem Statement:3 Add two Number
+      //Add two numbers and display the sum in the console window by passing the numbers asarguments of the function
+      //5
+      //10
+
+      function addNum(a, b) {
+        console.log(a + b);
+      }
+      addNum(5, 10);
+      addNum(10, 11);
+
+      //Problem Statement : 4 Sum of two Number
+      //Display the sum of two numbers in the console window by using a function with parameter,function return, and prompt for getting user input.
+      //Output:Enter fist number:
+      //Enter second number:
+      //The sum is 7.4
+
+      function sumNum(a, b) {
+        return a + b;
+      }
+      let number = parseFloat(prompt("Enter first number:"));
+      let number2 = parseFloat(prompt("Enter second number:"));
+
+      let total = sumNum(number, number2);
+      console.log("The sum is " + total);
+
+    </script>
+  </body>
+</html>

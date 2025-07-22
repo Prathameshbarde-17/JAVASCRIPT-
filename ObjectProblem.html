@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Object</title>
+  </head>
+  <body>
+    <h1>JavaScript Object</h1>
+    <script>
+      //Problem Statement 1: 2D Arrays to Objects
+      // Write a javascript file to convert atwo-dimensionalarray into an object in JavaScript,
+      // print it on the console window of your browser?
+      /*
+            let i = {
+              neha: "Ice-Cream",
+              Rahul: "Pizza",
+              Ram: "Burger",
+              Shyam: "Spring Rolls",
+            };
+              console.log(i);
+      */
+
+      function arrayobject(arr) {
+        let obj = {};
+
+        arr.forEach((v) => {
+          let key = v[0];
+          let value = v[1];
+          obj[key] = value;
+        });
+        return obj;
+      }
+      console.log(
+        arrayobject([
+          ["neha", "Ice-Cream"],
+          ["Rahul", "Pizza"],
+          ["Ram", "Burger"],
+          ["Shyam", "Spring Rolls"],
+        ])
+      );
+
+      //Problem Statement 2: Delete Property
+      // Write a javascript file to create a student object of any 5 properties and
+      // then delete the 2 properties from the student object.
+      // Also console/alert the object output before or after deleting the property.
+
+      let student = {
+        Name: "Rahul Verma",
+        class: "10th",
+        RollNo: "31",
+        Subject: "English",
+        Marks: 34,
+      };
+      console.log(student);
+      alert(JSON.stringify(student, null, 4));
+      delete student.class;
+      delete student.RollNo;
+      console.log(student);
+      alert(JSON.stringify(student, null, 4));
+
+      //Problem Statement 3: Swap Values and Keys
+      // Write a javascript file to get a copy of the object
+      // where the keys have become the valuesand the values the keys.
+
+      //Problem Statement 4: Search for a given property (key)
+      // Write a javascript file to create a new object
+      // and then check whether an object containsany given property.
+
+      function hasKey(obj, key) {
+        return obj != null && hasOwnProperty.call(obj, key);
+      }
+      let obj = { Virat: "18", Rohit: "45", MSD: "07" };
+      alert(hasKey(obj, "Virat"));
+      console.log(hasKey(obj, "Virat"));
+    </script>
+  </body>
+</html>
