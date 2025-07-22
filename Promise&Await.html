@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promise</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Fetching and displaying news</h1>
+      <table id="table" class="table"></table>
+    </div>
+    <script>
+      //Problem Statement 1: News App Write a javascript file to implement a news app by
+      // using the following  api=‘https://inshorts.deta.dev/news?category=all‘.
+      // Also add a catch statement if any error is en countered while fetching the api
+
+      fetch("https://inshorts.deta.dev/news?category=all")
+        .then((res) => res.json())
+        .then((json) => {
+          json = json.data;
+          let table = document.getElementById("table");
+          for (let i = 0; i < json.length; i++) {
+            let obj = json[i];
+            console.log(obj);
+            let row = doocument.createElement("tr");
+            let author = document.createElement("td");
+            let content = document.createElement("td");
+            author.innerHTML = obj.author;
+            content.innerHTML = obj.content;
+            row.appendChild(author);
+            row.appendChild(content);
+            table.appendChild(row);
+          }
+          console.log(json);
+        })
+        .catch((error) => console.log(error));
+
+      //Problem Statement 2: Harry Potter Character Name and ImageWrite a javascript file to
+      //display the harry potter character image and name after taking the character’s name as input from the user using the following api=‘https://hp-api.herokuapp.com/api/characters/’ and also display any error message if the character is not found!
+    </script>
+  </body>
+</html>

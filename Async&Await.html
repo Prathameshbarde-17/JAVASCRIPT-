@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1></h1>
+    <div id="Promise"></div>
+    <script>
+      //Async
+
+      //It used Before function write "async" keyword
+      async function myfunction() {
+        throw new Error("This is a new Err");
+        return "Hii Patty...";
+      }
+      function success(value) {
+        console.log("Successful run.." + value);
+      }
+      function unsucces(value) {
+        console.log("Unsuccesful run mean ERR.." + value);
+      }
+      myfunction().then(success, unsucces);
+
+      // Await
+
+      async function myfunction1() {
+        let myPromise = new Promise(function (resolve, reject) {
+          resolve("this is called");
+        });
+
+        document.getElementById("Promise").innerHTML = await myPromise;
+      }
+      myfunction1();
+    </script>
+  </body>
+</html>

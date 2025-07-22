@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Problem Asynchronous</title>
+    <style>
+        body{height:100%;background-image: linear-gradient(to right, rgb(161, 113, 209),rgb(18, 8, 85));font-family: "Montserrat","Helvetica Neue","sans-serif";5
+      }
+        .container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 style="text-align: center; color: azure">Om Image Generator</h1>
+      <img id="image" />
+    </div>
+
+    <script>
+      /*
+      //Problem Statement 1: Number Guesser
+      //Writea javascript file to make a number guesser game where you ask the user for
+      //the input number from 1 to 15 and check whether the number guessed is right or wrong?
+
+      const enterNumber = () => {
+        return new Promise((resolve, reject) => {
+          const userNumber = Number(window.prompt("Enter  a number(1-15:)"));
+
+          const randomNum = Math.floor(Math.random() * 15 + 1);
+
+          if (isNaN(userNumber)) {
+            reject(new Error("Wrong Input Type"));
+          }
+          if (userNumber === randomNum) {
+            resolve({
+              score: 2,
+              randomNum,
+            });
+          } else if (
+            userNumber === randomNum - 1 ||
+            userNumber === randomNum + 1
+          ) {
+            resolve({
+              score: 1,
+              randomNum,
+            });
+          } else {
+            resolve({
+              score: 0,
+              randomNum,
+            });
+          }
+        });
+      };
+
+      const continueGame = () => {
+        return new Promise((resolve) => {
+          if (window.confirm("Do you want to continue?")) {
+            resolve(true);
+          } else {
+            resolve(false);
+          }
+        });
+      };
+
+      const handleGuess = async () => {
+        try {
+          const result = await enterNumber();
+
+          alert(`Number:${result.randomNum}: you got ${result.score} score`);
+
+          const isContinuing = await continueGame();
+
+          if (isContinuing) {
+            handleGuess();
+          } else {
+            alert("Game End");
+          }
+        } catch (error) {
+          alert(error);
+        }
+      };
+      handleGuess();
+
+*/
+      //Problem Statement 2: Random Image Generator
+      // Write a javascript file to make a random image generator using an API call?
+
+      const url = "om image API call.jfif";
+      const img = document.getElementById("image");
+      const getImage = async (url) => {
+        return await fetch(url).then((res) => res.url);
+      };
+      const img_url = getImage;
+      getImage(url).then((result) => {
+        img.setAttribute(`src`, result);
+      });
+    </script>
+  </body>
+</html>
