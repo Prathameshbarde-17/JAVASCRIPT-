@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Asynchronous JS</title>
+  </head>
+  <body>
+    <h1>
+      Asynchronous JS:
+      <p>The program will be executed immediately in code.</p>
+      <p>setTimeout()</p>
+    </h1>
+    <script>
+            console.log("Before delay...");
+
+            function delay(SEC) {
+              let now = Date.now();
+              let start = Date.now();
+              while (now - start < SEC * 1000) {
+                now = Date.now();
+              }
+            }
+            setTimeout(function () {
+              console.log("Deplayed");
+            }, 200);
+            console.log("After delay");
+
+
+      //Function Call Stack
+
+      it writen
+    </script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Synchronous</title>
+  </head>
+  <body>
+    <h1>Type</h1>
+    <b
+      >Synchronous:
+      <p>
+        Every statement in code is executed in sequence one after the other.
+      </p></b
+    >
+    <script>
+      //Synchronous JS
+      console.log("Before delay...");
+
+      function delay(SEC) {
+        let now = Date.now();
+        let start = Date.now();
+        while (now - start < SEC * 1000) {
+          now = Date.now();
+        }
+      }
+      delay(10);
+      //Wait for 10 sec;
+      console.log("After delay....");
+    </script>
+    >
+  </body>
+</html>
