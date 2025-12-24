@@ -27,6 +27,60 @@
     </p>
     <button onclick="myFunction()">Go Back</button> <br /><br />
     <button onclick="myFunction2()">Go Back 2 pages</button>
+    <br />
+    <br />
+    <h3>Web Pointer API</h3>
+    <p>
+      Web Pointer API are use to get the current position of the user. <br />
+      In this API Event names are similar to mouse events.
+    </p>
+    <div
+      id="demo3"
+      style="
+        background-color: rgb(255, 255, 255);
+        border: red, 2px solid;
+        width: 100px;
+        height: 100px;
+        pointer-events: auto;
+      "
+    ></div>
+
+    <br /><br />
+    <h3>Web storage API</h3>
+    <p>
+      The Web Storage API is used to store data in the browser.<br />
+      It allows websites to save information on the user’s device so it can be
+      used later without a server or database.
+    </p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <br /><br />
+    <h3>Web Validation API</h3>
+    <p>
+      The Validation API in JavaScript is a browser feature that helps check
+      whether form input data is correct or not before submitting the form.
+    </p>
+    <br />
+    <p>Enter a number between 100 and 500 & click SUBMIT!</p>
+    <input type="number" id="demo6" min="100" max="500" required />
+    <button onclick="myFunction3()">SUBMIT</button>
+    <p id="demo0">
+      If the number is less than 100 or greater than 500, an error message will
+      be displayed
+    </p>
+
+    <br />
+    <h3>Web Worker API</h3>
+    <p>
+      A web worker is a JavaScript running in the background, without affecting
+      the performance of the page.
+    </p>
+
+    <p>Count numbers: <output id="result"></output></p>
+    <button onclick="startWorker()">Start Worker</button>
+    <button onclick="stopWorker()">Stop Worker</button>
+
     <script src="API.js"></script>
+     <script src="API-2.js"></script>
   </body>
 </html>
