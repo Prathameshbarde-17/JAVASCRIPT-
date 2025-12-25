@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSON</title>
+  </head>
+  <body>
+    <h1>Problem Statement in JSON</h1>
+    <p id="print"></p>
+
+    <script>
+      //Problem Statement:
+
+      let myDetail = '{"name":"Shiva","class":"7th","Car":"Creata"}';
+      let obj = JSON.parse(myDetail);
+      document.getElementById("print").innerHTML = obj.Car;
+
+      //Problem Statement:
+      // With your knowledge gained onJSON consider creating an object in javascript
+      //  listing details of a school giving the following output.
+
+      var Studentobj = {
+        "name=": "SBOA",
+        "Year=": 1988,
+        "Rank=": 1,
+        "student=": 1000,
+      };
+
+      document.write("<h1>JSON</h1>");
+      document.write("<br>");
+      document.write("<h3>School Name=" + Studentobj.name + "</h3>");
+      document.write("<h3>Year=" + Studentobj.Year + "</h3>");
+      document.write("<h3>Rank in the city=" + Studentobj.Rank + "</h3>");
+      document.write(
+        "<h3>No.of studying student=" + Studentobj.student + "</h3>"
+      );
+    </script>
+  </body>
+</html>
